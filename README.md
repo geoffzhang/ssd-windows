@@ -4,6 +4,23 @@ This is the Windows version of SSD: Single Shot MultiBox Detector, tested on VS2
 
 work with lastest caffe and VS2015 build.
 
+## How to build
+
+```
+git clone https://github.com/imistyrain/ssd-windows
+cd ssd-windows
+scripts/build_win.cmd
+```
+
+## How to Use
+
+get the pretrained model from the link below,then
+
+```
+build/examples/ssd/ssd_detect "models/VGGNet/VOC0712/SSD_300x300/deploy.prototxt" "models/VGGNet/VOC0712/SSD_300x300/VGG_VOC0712_SSD_300x300_iter_120000.caffemodel" "list.txt" --confidence_threshold=0.6
+```
+You can also find a more useful pretrained face detection project on [ssd-face](https://github.com/imistyrain/ssd-face)
+
 [![Build Status](https://travis-ci.org/weiliu89/caffe.svg?branch=ssd)](https://travis-ci.org/weiliu89/caffe)
 [![License](https://img.shields.io/badge/license-BSD-blue.svg)](LICENSE)
 
